@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+  --primaryFont : 'JejuMyeongjo';
+  --secondaryFont: 'Roboto';
+  --tertiaryFont: 'Road Rage';
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -22,4 +28,17 @@ body{
   font-family: 'JejuMyeongjo';
   background-color: #02191D;
   color: #fff;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
 }

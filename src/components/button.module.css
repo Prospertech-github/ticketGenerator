@@ -1,0 +1,9 @@
+.navbtn{
+    padding: 1.6rem 2.4rem;
+    font-size: 1.6rem;
+    font-family: var(--primaryFont), sans-serif;
+    text-transform: uppercase;
+    color: #0A0C11;
+    border: none;
+    border-radius: 15px;
+}

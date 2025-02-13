@@ -1,0 +1,28 @@
+header{
+    border: 1px solid #197686;
+    border-radius: 15px;
+    padding: 2rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--primaryFont), sans-serif;
+}
+
+.logo{
+    width: 10rem;
+}
+
+.navItems{
+    display: flex;
+    gap: 3.6rem;
+}
+
+.navItems a{
+    font-size: 1.8rem;
+    color: #B3B3B3;
+}
+
+.navItems a:global(.active){
+    color: #fff;
+}
+
