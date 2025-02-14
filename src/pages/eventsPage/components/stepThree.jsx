@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./stepThree.module.css";
+import { Barcodes } from "../../../assets";
 
 const StepThree = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -54,7 +55,9 @@ const StepThree = () => {
           </div>
         </div>
         <div className={styles.clipThree}>
-          <div className={styles.clipFour}></div>
+          <div className={styles.clipFour}>
+            <img src={Barcodes} alt="" />
+          </div>
         </div>
       </div>
     </div>
