@@ -34,9 +34,6 @@ const StepTwo = ({ form, handleChange, setCurrentStep, setFormData}) => {
     formData.append("file", image);
     formData.append("upload_preset", "zbg4mam7");
 
-    console.log("Uploading file:", image);
-    console.log(formData);
-
     try {
       const response = await axios.post(
         "https://api.cloudinary.com/v1_1/prosper99/image/upload",

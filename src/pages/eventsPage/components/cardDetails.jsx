@@ -8,14 +8,22 @@ import { StepThree } from "./stepThree";
 let heading;
 
 const CardDetails = () => {
-  const [currentStep, setCurrentStep] = useState(3);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    imageUrl: "",
-    ticketQuantity: "1",
-    ticketType: "",
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const [formData, setFormData] = useState(() => {
+    const savedData = localStorage.getItem("formData");
+    return savedData ? JSON.parse(savedData) : {
+      fullName: "",
+      email: "",
+      imageUrl: "",
+      ticketQuantity: "1",
+      ticketType: "",
+    };
   });
+
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
 
   const resetValues = () => {
     setFormData({
@@ -74,7 +82,7 @@ const CardDetails = () => {
         />
       )}
       {currentStep === 3 && (
-        <StepThree />
+        <StepThree form={formData}/>
       )}
       <ToastContainer />
     </>
