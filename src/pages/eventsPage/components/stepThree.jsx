@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./stepThree.module.css";
 
 const StepThree = () => {
-  const [userDetails, setUserDetails] = useState("");
+  const [userDetails, setUserDetails] = useState(null);
 
   useEffect(() => {
     let form = JSON.parse(localStorage.getItem("formData"));
-    console.log(form)
-    setUserDetails(form.imageUrl);
-    
+    setUserDetails(form);
   }, []);
   return (
     <div>
@@ -27,29 +25,30 @@ const StepThree = () => {
 
               <div className={styles.imgHolder}>
                 {userDetails ? (
-                  <img src={userDetails} alt="Ticket QR Code" />
+                  <img src={userDetails.imageUrl} alt="Ticket QR Code" />
                 ) : (
                   <p>Loading image...</p>
                 )}
               </div>
 
               <div className={styles.gridBox}>
-                <div id="box1">
-
+                <div className={styles.box1}>
+                  <p>Name:</p>
+                  <p>{userDetails?.fullName}</p>
                 </div>
-                <div id="box2">
-
+                <div className={styles.box2}>
+                  <p>Email:</p>
+                  <p>{userDetails?.email}</p>
                 </div>
-                <div id="box3">
-
+                <div className={styles.box3}>
+                  <p>Ticket Type:</p>
+                  <p>{userDetails?.ticketType}</p>
                 </div>
-                <div id="box4">
-
+                <div className={styles.box4}>
+                  <p>Ticket for:</p>
+                  <p>{userDetails?.ticketQuantity}</p>
                 </div>
-                <div id="box5">
-                    
-                </div>
-
+                <div className={styles.box5}></div>
               </div>
             </div>
           </div>

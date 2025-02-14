@@ -112,12 +112,12 @@
     grid-template-columns: repeat(2, 1fr); 
     padding: 4px; 
 }
-#box1 {
+.box1 {
     padding: 4px; 
     border-right: 1px solid rgba(255, 255, 255, 0.2); 
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
-#box2 {
+.box2 {
     padding: 4px; 
     max-width: 105px;
     overflow: hidden;
@@ -125,16 +125,16 @@
     text-overflow: ellipsis;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
-#box3{
+.box3{
     padding: 4px; 
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-#box4{
+.box4{
     padding: 4px; 
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-#box5{
+.box5{
     padding: 4px;
     grid-column: span all; 
 }
