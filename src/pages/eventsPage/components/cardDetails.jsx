@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./cardDetails.module.css";
 import { ToastContainer } from "react-toastify";
 import { StepOne } from "./stepOne";
@@ -11,8 +11,8 @@ const CardDetails = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    avatar: "",
-    ticketQuantity: "",
+    imageUrl: "",
+    ticketQuantity: "1",
     ticketType: "",
   });
 
@@ -20,7 +20,7 @@ const CardDetails = () => {
     setFormData({
       fullName: "",
       email: "",
-      avatar: "",
+      mageUrl: "",
       ticketQuantity: "1",
       ticketType: "",
     });
@@ -65,7 +65,13 @@ const CardDetails = () => {
         />
       )}
       {currentStep === 2 && (
-        <StepTwo />
+        <StepTwo
+          form={formData}
+          handleChange={handleChange}
+          setCurrentStep={setCurrentStep}
+          setFormData={setFormData}
+          // reset={resetValues}
+        />
       )}
       <ToastContainer />
     </>
@@ -73,5 +79,3 @@ const CardDetails = () => {
 };
 
 export { CardDetails };
-
-

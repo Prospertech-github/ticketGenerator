@@ -136,3 +136,9 @@
 .inputDiv input:focus {
   outline: none;
 }
+
+
+.uploadedImage{
+  height: 100%;
+  width: 100%;
+}
