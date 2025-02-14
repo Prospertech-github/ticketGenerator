@@ -157,3 +157,8 @@
   gap: 3.2rem;
 }
 
+.btnDiv > button{
+  width: 21rem;
+  height: 4.8rem;
+}
+

@@ -21,14 +21,15 @@
 }
 
 .btnDiv {
-  height: 4.8rem;
-  border: 1px solid #0e464f;
-  border-radius: 24px;
   margin: 3.2rem 0 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 3.2rem;
+  gap: 1.6rem;
+}
+.btnDiv > button {
+  display: inline-block;
+  width: 27rem;
+  height: 4.8rem;
 }
 
 .avatarCard {
@@ -45,8 +46,7 @@
   font-size: 1.6rem;
 }
 .avatarInput {
-  background-color: #000;
-  opacity: 0.2;
+  background: rgba(0, 0, 0, 0.2);
   width: 50rem;
   height: 24rem;
   display: flex;
@@ -82,20 +82,57 @@
   cursor: pointer;
   border-radius: 8px;
   text-align: center;
-  color: #fff;
   z-index: 10;
-  border: 2px solid red;
 }
 .uploadIcon {
   font-size: 2rem;
   color: #fff;
 }
 .uploadLabel > p {
-  color: #fafafa !important;
   font-size: 1.6rem;
   width: 85%;
   text-align: center;
 }
-#fileUpload {
+.fileUpload {
+  visibility: hidden;
   display: none;
+}
+
+.formArea {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding: 0;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: var(--secondaryFont);
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.inputDiv textarea,
+.inputDiv input {
+  background: transparent;
+  border: 1px solid #0e464f;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 1rem;
+}
+.inputDiv input {
+  padding: 1.5rem 1rem;
+}
+.inputDiv textarea {
+  height: 12.5rem;
+}
+.inputDiv textarea::placeholder,
+.inputDiv input::placeholder {
+  font-family: var(--secondaryFont);
+}
+.inputDiv textarea:focus,
+.inputDiv input:focus {
+  outline: none;
 }

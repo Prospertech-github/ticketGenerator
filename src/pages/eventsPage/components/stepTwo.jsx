@@ -32,16 +32,26 @@ const StepTwo = () => {
 
               <p>Drag & drop or click to Upload</p>
             </label>
-            <input id="fileUpload" type="file" />
+            <input id="fileUpload" className={styles.fileUpload} type="file" />
           </div>
         </div>
       </div>
 
       <div className={styles.stepLine} />
 
-      <section className={styles.ticketType}>
-        <p>Select Ticket Type:</p>
-        <div className={styles.typeSelection}></div>
+      <section className={styles.formArea}>
+        <div className={styles.inputDiv}>
+          <label htmlFor="fullName"> Enter your name</label>
+          <input type="text" name="fullName" id="fullName" placeholder="Gbadebo Rhodes"/>
+        </div>
+        <div className={styles.inputDiv}>
+          <label htmlFor="email"> Email *</label>
+          <input type="email" name="email" id="email" placeholder="hello@avioflagos.io"/>
+        </div>
+        <div className={styles.inputDiv}>
+          <label htmlFor="remarks"> About the project</label>
+          <textarea name="remarks" id="remarks" placeholder="What is/are your concern(s) about the event"></textarea>
+        </div>
       </section>
 
       <section className={styles.btnDiv}>
