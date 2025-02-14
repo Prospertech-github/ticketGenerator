@@ -1,12 +1,19 @@
-import React from 'react'
-import styles from "./button.module.css"
+import React from "react";
+import styles from "./button.module.css";
 
 const NavButton = () => {
-  return (
-    <button className={styles.navbtn}>
-        My Tickets &rarr;
-    </button>
-  )
-}
+  return <button className={styles.navbtn}>My Tickets &rarr;</button>;
+};
 
-export {NavButton}
+const FormButtons = ({ label, primary, onClick }) => {
+  return (
+    <button
+      className={`${styles.formBtn} ${primary ? styles.primaryBtn : ""}`}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+};
+
+export { NavButton, FormButtons };

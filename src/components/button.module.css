@@ -6,4 +6,29 @@
     color: #0A0C11;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
+}
+
+.formBtn{
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: var(--primaryFont);
+    line-height: 1.5;
+    text-align: center;
+    width: 21rem;
+    height: 4.8rem;
+    border: 1px solid #0E464F;
+    border-radius: 10px;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #24A0B5;
+    cursor: pointer;
+}
+.formBtn.primaryBtn{
+    background-color: #24A0B5;
+    color: #fff;
+    border: none;
+}
+button:focus{
+    outline: none;
 }

@@ -26,11 +26,15 @@
     background: linear-gradient(to right, #24A0B5 40%, #0E464F 40%);
 }
 
+.stepLine{
+    height: 4px;
+    background-color: #07373F;
+    margin: 3.2rem 0;
+}
 
 /* STEP ONE CARD */
 .stepOneCard{
     width: 60.4rem;
-    /* height: 20rem; */
     padding: 2.4rem;
     border: 1px solid #0E464F;
     border-radius: 15px;
@@ -51,12 +55,102 @@
 .eventDetails > h2{
     font-family: var(--tertiaryFont);
     font-size: 6.2rem;
-    border-bottom: 5px solid #fff;
+    border-bottom: 3px solid #fff;
 }
 .eventDetails > p{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-decoration: underline;
     text-align: center;
     width: 70%;
     line-height: 1.5;
+}
+.ticketType{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: .8rem;
+    width: 100%;
+}
+.ticketType > p, .ticketNum > p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-decoration: underline;
+}
+.typeSelection{
+    border: 1px solid #0E464F;
+    border-radius: 15px;
+    padding: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+}
+
+.ticketSelect{
+    padding: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: .8rem;
+    width: 24rem;
+    border: 1px solid #0E464F;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.ticketDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ticketDetails > h3, .ticketDetails > p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.ticketPrice{
+    border: 1px solid #0E464F;
+    border-radius: 10px;
+    background-color: #2BA4B9;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: right;
+    text-decoration: underline;
+    padding: .8rem;
+    width: 8rem;
+}
+
+.ticketNum{
+    width: 100%;
+    padding: 0;
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+}
+.ticketQuantity{
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    padding-right: 2rem;
+    margin: .8rem 0;
+    border: 1px solid #0E464F;
+    border-radius: 10px;
+    /* appearance: ; */
+}
+.ticketQuantity > option{
+    padding-right: 4rem;
+}
+.ticketQuantity:focus{
+    outline: none;
+}
+
+.btnDiv{
+    height: 4.8rem;
+    border: 1px solid #0E464F;
+    border-radius: 24px;
+    margin: 3.2rem 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
 }
