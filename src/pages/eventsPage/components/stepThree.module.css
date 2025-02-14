@@ -67,75 +67,91 @@
   );
 }
 
-.ticketDetails{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
-    background-color: rgba(3, 30, 33, 0.1); 
-    border: 1px solid #24A0B5;
-    border-radius: 14px;
-    font-size: 1.6rem;
-    margin: .8rem;
+.ticketDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  background-color: rgba(3, 30, 33, 0.1);
+  border: 1px solid #24a0b5;
+  border-radius: 14px;
+  font-size: 1.6rem;
+  margin: 0.8rem;
 }
-.ticketDetails h3{
-    font-size: 3.4rem;
-    font-family: var(--tertiaryFont);
-    margin: 1rem 0;
+.ticketDetails h3 {
+  font-size: 3.4rem;
+  font-family: var(--tertiaryFont);
+  margin: 1rem 0;
 }
-.ticketDetails p{
-    margin-bottom: 1rem;
-}
-
-.imgHolder{
-    width: 160px;
-    height: 160px;
-    border: 4px solid rgba(36, 160, 181, 0.5);
-    border-radius: 12px;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.imgHolder img{
-    width: 100%;
-    object-fit: cover;
+.ticketDetails p {
+  margin-bottom: 1rem;
 }
 
-.gridBox{
-    width: 100%;
-    background-color: #08343C;
-    border-radius: 8px;
-    border: 1px solid #133D44;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    padding: 4px; 
+.imgHolder {
+  width: 160px;
+  height: 160px;
+  border: 4px solid rgba(36, 160, 181, 0.5);
+  border-radius: 12px;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.imgHolder img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.gridBox {
+  width: 100%;
+  background-color: #08343c;
+  border-radius: 8px;
+  border: 1px solid #133d44;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4px;
+  font-size: 1.2rem;
 }
 .box1 {
-    padding: 4px; 
-    border-right: 1px solid rgba(255, 255, 255, 0.2); 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  padding: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .box2 {
-    padding: 4px; 
-    max-width: 105px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  padding: 4px;
+  max-width: 105px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.box3{
-    padding: 4px; 
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.box3 {
+  padding: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.box4{
-    padding: 4px; 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.box4 {
+  padding: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.box5{
-    padding: 4px;
-    grid-column: span all; 
+.box5 {
+  padding: 4px;
+  grid-column: span all;
+}
+.detailtag {
+  color: #aaa;
+}
+
+.btnDiv {
+  margin: 3.2rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 1.6rem;
+}
+.btnDiv > button {
+  display: inline-block;
+  width: 27rem;
+  height: 4.8rem;
 }

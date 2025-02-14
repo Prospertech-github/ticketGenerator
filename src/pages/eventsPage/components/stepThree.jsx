@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import styles from "./stepThree.module.css";
 import { Barcodes } from "../../../assets";
+import { FormButtons } from "../../../components";
+import styles from "./stepThree.module.css";
 
-const StepThree = () => {
+const StepThree = ({setCurrentStep}) => {
   const [userDetails, setUserDetails] = useState(null);
 
   useEffect(() => {
@@ -34,19 +35,22 @@ const StepThree = () => {
 
               <div className={styles.gridBox}>
                 <div className={styles.box1}>
-                  <p>Name:</p>
+                  <p className={styles.detailtag}>Name:</p>
                   <p>{userDetails?.fullName}</p>
                 </div>
+
                 <div className={styles.box2}>
-                  <p>Email:</p>
+                  <p className={styles.detailtag}>Email:</p>
                   <p>{userDetails?.email}</p>
                 </div>
+
                 <div className={styles.box3}>
-                  <p>Ticket Type:</p>
+                  <p className={styles.detailtag}>Ticket Type:</p>
                   <p>{userDetails?.ticketType}</p>
                 </div>
+
                 <div className={styles.box4}>
-                  <p>Ticket for:</p>
+                  <p className={styles.detailtag}>Ticket for:</p>
                   <p>{userDetails?.ticketQuantity}</p>
                 </div>
                 <div className={styles.box5}></div>
@@ -60,6 +64,17 @@ const StepThree = () => {
           </div>
         </div>
       </div>
+
+      <section className={styles.btnDiv}>
+        <FormButtons
+          label="Book Another Ticket"
+          onClick={() => {
+            localStorage.removeItem('formData')
+            setCurrentStep(1)
+          }}
+        />
+        <FormButtons label="Download Ticket" primary  />
+      </section>
     </div>
   );
 };

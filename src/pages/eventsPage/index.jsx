@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, Card} from '../../components'
 import { CardDetails } from './components/cardDetails'
+import { ToastContainer } from 'react-toastify'
 
 const Events = () => {
   return (
@@ -8,6 +9,7 @@ const Events = () => {
       <Card>
         <CardDetails />
       </Card>
+      <ToastContainer />
     </Outlet>
   )
 }

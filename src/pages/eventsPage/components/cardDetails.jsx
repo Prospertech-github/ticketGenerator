@@ -12,13 +12,15 @@ const CardDetails = () => {
 
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem("formData");
-    return savedData ? JSON.parse(savedData) : {
-      fullName: "",
-      email: "",
-      imageUrl: "",
-      ticketQuantity: "1",
-      ticketType: "",
-    };
+    return savedData
+      ? JSON.parse(savedData)
+      : {
+          fullName: "",
+          email: "",
+          imageUrl: "",
+          ticketQuantity: "1",
+          ticketType: "",
+        };
   });
 
   useEffect(() => {
@@ -82,9 +84,8 @@ const CardDetails = () => {
         />
       )}
       {currentStep === 3 && (
-        <StepThree form={formData}/>
+        <StepThree setCurrentStep={setCurrentStep} />
       )}
-      <ToastContainer />
     </>
   );
 };
