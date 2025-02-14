@@ -2,11 +2,12 @@ import React, { useState,useEffect } from "react";
 import styles from "./cardDetails.module.css";
 import { ToastContainer } from "react-toastify";
 import { StepOne } from "./stepOne";
+import { StepTwo } from "./stepTwo";
 
 let heading;
 
 const CardDetails = () => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -62,6 +63,9 @@ const CardDetails = () => {
           setCurrentStep={setCurrentStep}
           reset={resetValues}
         />
+      )}
+      {currentStep === 2 && (
+        <StepTwo />
       )}
       <ToastContainer />
     </>
