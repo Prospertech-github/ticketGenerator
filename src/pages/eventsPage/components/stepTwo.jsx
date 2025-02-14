@@ -53,6 +53,9 @@ const StepTwo = ({ form, handleChange, setCurrentStep, setFormData}) => {
         ...form, 
         imageUrl: response.data.secure_url
       })
+      setTimeout(() => {
+        setCurrentStep(3);
+      }, 5000);
     } catch (error) {
       console.error(
         "Error uploading image:",
@@ -65,7 +68,6 @@ const StepTwo = ({ form, handleChange, setCurrentStep, setFormData}) => {
   const handleNext = () => {
     if (validateInput()) {
       convertImagetoUrl();
-      // setCurrentStep(3);
     }
   };
 

@@ -3,11 +3,12 @@ import styles from "./cardDetails.module.css";
 import { ToastContainer } from "react-toastify";
 import { StepOne } from "./stepOne";
 import { StepTwo } from "./stepTwo";
+import { StepThree } from "./stepThree";
 
 let heading;
 
 const CardDetails = () => {
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(3);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -70,8 +71,10 @@ const CardDetails = () => {
           handleChange={handleChange}
           setCurrentStep={setCurrentStep}
           setFormData={setFormData}
-          // reset={resetValues}
         />
+      )}
+      {currentStep === 3 && (
+        <StepThree />
       )}
       <ToastContainer />
     </>

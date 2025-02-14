@@ -1,0 +1,67 @@
+.heading {
+  margin: 4.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.heading h2 {
+  font-size: 3.2rem;
+  font-family: var(--secondaryFont);
+  text-align: center;
+}
+.heading p {
+  font-size: 1.8rem;
+  text-align: center;
+}
+.ticketContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clipOne {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 480px;
+  align-items: center;
+  background-color: #24a0b5;
+  position: relative;
+  clip-path: path(
+    "M 0,15 A 15,15 0,0,0 15,0 L 285,0 A 15,15 0,0,0 300,15 L 300,465 A 15,15 0,0,0 285,480 L 15,480 A 15,15 0,0,0 0,465 L 0,15 Z"
+  );
+}
+.clipTwo {
+  background-color: #072c31;
+  position: absolute;
+  inset: 2px;
+  padding: 0.5rem;
+  clip-path: path(
+    "M 0,15 A 15,15 0,0,0 15,0 L 281,0 A 15,15 0,0,0 296,15 L 296,461 A 15,15 0,0,0 281,476 L 15,476 A 15,15 0,0,0 0,461 L 0,15 Z"
+  );
+}
+.clipThree {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 120px;
+  align-items: center;
+  background-color: #24a0b5;
+  position: relative;
+  margin-top: -2px;
+  clip-path: path(
+    "M 0,15 A 15,15 0,0,0 15,0 L 285,0 A 15,15 0,0,0 300,15 L 300,105 A 15,15 0,0,0 285,120 L 15,120 A 15,15 0,0,0 0,105 L 0,15 Z"
+  );
+}
+.clipFour {
+  background-color: #072c31;
+  position: absolute;
+  inset: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: path(
+    "M 0,15 A 15,15 0,0,0 15,0 L 281,0 A 15,15 0,0,0 296,15 L 296,101 A 15,15 0,0,0 281,116 L 15,116 A 15,15 0,0,0 0,101 L 0,15 Z"
+  );
+}
