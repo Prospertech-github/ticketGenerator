@@ -25,7 +25,7 @@ html{
 
 
 body{
-  font-family: 'JejuMyeongjo';
+  font-family: 'Roboto', serif;
   background-color: #02191D;
   color: #fff;
 }
@@ -41,4 +41,13 @@ ul,ol{
 
 a{
   text-decoration: none;
+}
+
+.card{
+  border: 1px solid #0E464F;
+  border-radius: 15px;
+  width: 70rem;
+  height: 60vh;
+  margin: 4.6rem auto 0;
+  padding: 4.8rem;
 }
