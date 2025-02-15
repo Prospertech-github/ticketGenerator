@@ -1,7 +1,7 @@
-import { FormButtons } from "../../../components";
+import { FormButtons } from "../../../../components";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import styles from "./cardDetails.module.css";
+import styles from "./stepOne.module.css";
 
 const tickets = [
   {

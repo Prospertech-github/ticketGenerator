@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink } from 'react-router-dom'
-import { TiczLogo } from '../assets'
-import { NavButton } from '../components'
+import { TiczLogo } from '../../assets'
+import { NavButton } from '../../components'
 import styles from './header.module.css'
 
 

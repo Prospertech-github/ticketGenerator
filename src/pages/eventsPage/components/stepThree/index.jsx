@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Barcodes } from "../../../assets";
-import { FormButtons } from "../../../components";
+import { Barcodes } from "../../../../assets";
+import { FormButtons } from "../../../../components";
 import styles from "./stepThree.module.css";
 
 const StepThree = ({setCurrentStep}) => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormButtons } from "../../../components";
+import { FormButtons } from "../../../../components";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./stepTwo.module.css";
