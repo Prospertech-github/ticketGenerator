@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormButtons } from "../../../../components";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,47 +24,42 @@ const StepTwo = ({ form, handleChange, setCurrentStep, setFormData}) => {
     return true;
   };
 
-  const convertImagetoUrl = async () => {
-    if (!image) {
-      alert("Please select an image first");
-      return;
+  useEffect(()=>{
+    async function convertImagetoUrl() {
+      const formData = new FormData();
+      formData.append("file", image);
+      formData.append("upload_preset", "zbg4mam7");
+  
+      try {
+        const response = await axios.post(
+          "https://api.cloudinary.com/v1_1/prosper99/image/upload",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        toast.success("Image uploaded successfully!");
+        setImageUrl(response.data.secure_url);
+        setFormData({
+          ...form, 
+          imageUrl: response.data.secure_url
+        })
+      } catch (error) {
+        console.error(
+          "Error uploading image:",
+          error.response?.data || error.message
+        );
+        toast.error("Image upload failed. Please try again.");
+      }
     }
-
-    const formData = new FormData();
-    formData.append("file", image);
-    formData.append("upload_preset", "zbg4mam7");
-
-    try {
-      const response = await axios.post(
-        "https://api.cloudinary.com/v1_1/prosper99/image/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-      toast.success("Image uploaded successfully!");
-      setImageUrl(response.data.secure_url);
-      setFormData({
-        ...form, 
-        imageUrl: response.data.secure_url
-      })
-      setTimeout(() => {
-        setCurrentStep(3);
-      }, 5000);
-    } catch (error) {
-      console.error(
-        "Error uploading image:",
-        error.response?.data || error.message
-      );
-      toast.error("Image upload failed. Please try again.");
-    }
-  };
+    if(image) convertImagetoUrl();
+  }, [image])
 
   const handleNext = () => {
     if (validateInput()) {
-      convertImagetoUrl();
+      setCurrentStep(3);;
     }
   };
 
